@@ -1,6 +1,8 @@
-Depends on [enquire.js](http://wicky.nillia.ms/enquire.js/).
+Simplify your Javascript breakpoints with a simple breakpoint definition and callback syntax
 
 ```
+BreakpointManager = require "breakpoint-manager"
+
 $(document).bind "breakpoint:match", (e, breakpoint) =>
   if breakpoint is "desktop"
     @onDesktop()
