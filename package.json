@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "main": "lib/breakpoint-manager.js",
   "author": "Matt Fordham <matt@wintr.us> (http://wintr.us/)",
+  "description": "Simplify your Javascript breakpoints",
   "contributors": [
     "Nate Bailey <nate@wintr.us> (http://wintr.us/)"
   ],
