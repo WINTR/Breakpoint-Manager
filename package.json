@@ -6,6 +6,10 @@
   "contributors": [
     "Nate Bailey <nate@wintr.us> (http://wintr.us/)"
   ],
+  "repository": {
+    "type" : "git", 
+    "url" : "http://github.com/WINTR/Breakpoint-Manager.git"
+  },
   "scripts": {
     "build": "gulp build",
     "prepublish": "gulp build"
