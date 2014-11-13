@@ -3,10 +3,10 @@
 # Author: matt@wintr.us @ WINTR
 #
 # This class will broadcast an event whenever a breakpoint
-# is matched or unmatched. Depends on enquire.js and jQuery
+# is matched or unmatched. Depends on enquire.js
 #########################################################
 
-$ = jQuery
+enquire = require "enquire.js"
 
 class BreakpointManager
   # Breakpoint events will be triggered on this scope
@@ -31,21 +31,22 @@ class BreakpointManager
     @scope = options.scope
     @breakpoints = options.breakpoints
 
-    $.each @breakpoints, (breakpoint, boundries) =>
+    @register breakpoint, boundaries for breakpoint, boundaries of @breakpoints
 
-      if boundries.min is null
-        query = "screen and (min-width:0px) and (max-width:#{boundries.max}px)"
-      else if boundries.max is null
-        query = "screen and (min-width:#{boundries.min}px)"
-      else
-        query = "screen and (min-width:#{boundries.min}px) and (max-width:#{boundries.max}px)"
+  register: (breakpoint, boundaries) =>
+    if boundaries.min is null
+      query = "screen and (min-width:0px) and (max-width:#{boundaries.max}px)"
+    else if boundaries.max is null
+      query = "screen and (min-width:#{boundaries.min}px)"
+    else
+      query = "screen and (min-width:#{boundaries.min}px) and (max-width:#{boundaries.max}px)"
 
-      enquire.register(query,
-        match: =>
-          @scope.trigger("breakpoint:match", breakpoint)
-        unmatch: =>
-          @scope.trigger("breakpoint:unmatch", breakpoint)
-      )
+    enquire.register(query,
+      match: =>
+        @scope.trigger("breakpoint:match", breakpoint)
+      unmatch: =>
+        @scope.trigger("breakpoint:unmatch", breakpoint)
+    )
 
 #--------------------------------------------------------
 

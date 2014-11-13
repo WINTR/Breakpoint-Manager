@@ -1,0 +1,26 @@
+{
+  "name": "breakpoint-manager",
+  "version": "0.1.0",
+  "main": "lib/breakpoint-manager.js",
+  "author": "Matt Fordham <matt@wintr.us> (http://wintr.us/)",
+  "contributors": [
+    "Nate Bailey <nate@wintr.us> (http://wintr.us/)"
+  ],
+  "scripts": {
+    "build": "gulp build",
+    "prepublish": "gulp build"
+  },
+  "dependencies": {
+    "enquire.js": "^2.1.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-clean": "^0.3.0",
+    "gulp-coffee": "~2.0.0",
+    "gulp-load-plugins": "^0.5.3",
+    "gulp-plumber": "~0.6.2",
+    "gulp-rename": "^1.2.0",
+    "require-dir": "^0.1.0",
+    "run-sequence": "~0.3.6"
+  }
+}

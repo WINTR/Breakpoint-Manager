@@ -1,4 +1,4 @@
-Depends on jQuery and [enquire.js](http://wicky.nillia.ms/enquire.js/).
+Depends on [enquire.js](http://wicky.nillia.ms/enquire.js/).
 
 ```
 $(document).bind "breakpoint:match", (e, breakpoint) =>
