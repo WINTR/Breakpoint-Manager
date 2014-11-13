@@ -5,8 +5,8 @@ var requireDir    = require('require-dir');
 var runSequence   = require('run-sequence');
 
 gulp.task("clean", function() {
-  gulp.src("./lib", { read: false })
-    .pipe(plugins.clean({force: true}));
+  gulp.src("lib/*.js", { read: false })
+    .pipe(plugins.clean());
 });
 
 gulp.task("javascripts", function() {
